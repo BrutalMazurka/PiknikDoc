@@ -1,0 +1,114 @@
+08:19:52,939> [INFO ] P inited
+08:19:52,940> [INFO ] Proxy opened, master=true
+08:19:54,056> [INFO ] IO TcpServer inited, port=63855
+08:19:54,057> [INFO ] IOTcpServerSett{port=63855, activeClientsCheckPeriod[mills]=5000, serverCodeName=, txLoopMills=500, rxLoopMills=1, logger=IngenicoTransitProt, maxCountOfOutMsgsInQueue=1000, outMsgSizePrintConstrain=-1, inMsgSizePrintConstrain=-1, startTxThread=true, startRxThread=true}
+08:20:40,215> [INFO ] P deinited
+08:20:40,216> [INFO ] Proxy closed
+08:20:40,217> [ERROR] IO TcpServer rx loop
+java.net.SocketException: Socket closed
+	at sun.nio.ch.NioSocketImpl.endAccept(Unknown Source) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.accept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.implAccept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.platformImplAccept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.implAccept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.implAccept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.accept(Unknown Source) ~[?:?]
+	at jCommons.comm.io.access.IOTcpServerAccess.receiveLoop(IOTcpServerAccess.java:122) [piknik-1.0.6-deps.jar:?]
+	at jCommons.comm.io.access.IOAccessBase$1.run(IOAccessBase.java:40) [piknik-1.0.6-deps.jar:?]
+	at java.lang.Thread.run(Unknown Source) [?:?]
+08:20:40,219> [INFO ] IO TcpServer rx loop finished
+08:21:22,833> [INFO ] P inited
+08:21:22,833> [INFO ] Proxy opened, master=true
+08:21:23,872> [INFO ] IO TcpServer inited, port=63855
+08:21:23,873> [INFO ] IOTcpServerSett{port=63855, activeClientsCheckPeriod[mills]=5000, serverCodeName=, txLoopMills=500, rxLoopMills=1, logger=IngenicoTransitProt, maxCountOfOutMsgsInQueue=1000, outMsgSizePrintConstrain=-1, inMsgSizePrintConstrain=-1, startTxThread=true, startRxThread=true}
+08:25:16,092> [INFO ] P deinited
+08:25:16,093> [INFO ] Proxy closed
+08:25:16,095> [ERROR] IO TcpServer rx loop
+java.net.SocketException: Socket closed
+	at sun.nio.ch.NioSocketImpl.endAccept(Unknown Source) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.accept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.implAccept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.platformImplAccept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.implAccept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.implAccept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.accept(Unknown Source) ~[?:?]
+	at jCommons.comm.io.access.IOTcpServerAccess.receiveLoop(IOTcpServerAccess.java:122) [piknik-1.0.6-deps.jar:?]
+	at jCommons.comm.io.access.IOAccessBase$1.run(IOAccessBase.java:40) [piknik-1.0.6-deps.jar:?]
+	at java.lang.Thread.run(Unknown Source) [?:?]
+08:25:16,118> [INFO ] IO TcpServer rx loop finished
+08:42:11,812> [INFO ] P inited
+08:42:11,812> [INFO ] Proxy opened, master=true
+08:42:12,788> [INFO ] IO TcpServer inited, port=63855
+08:42:12,789> [INFO ] IOTcpServerSett{port=63855, activeClientsCheckPeriod[mills]=5000, serverCodeName=, txLoopMills=500, rxLoopMills=1, logger=IngenicoTransitProt, maxCountOfOutMsgsInQueue=1000, outMsgSizePrintConstrain=-1, inMsgSizePrintConstrain=-1, startTxThread=true, startRxThread=true}
+08:43:14,134> [INFO ] P deinited
+08:43:14,135> [INFO ] Proxy closed
+08:43:14,138> [ERROR] IO TcpServer rx loop
+java.net.SocketException: Socket closed
+	at sun.nio.ch.NioSocketImpl.endAccept(Unknown Source) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.accept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.implAccept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.platformImplAccept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.implAccept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.implAccept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.accept(Unknown Source) ~[?:?]
+	at jCommons.comm.io.access.IOTcpServerAccess.receiveLoop(IOTcpServerAccess.java:122) [piknik-1.0.6-deps.jar:?]
+	at jCommons.comm.io.access.IOAccessBase$1.run(IOAccessBase.java:40) [piknik-1.0.6-deps.jar:?]
+	at java.lang.Thread.run(Unknown Source) [?:?]
+08:43:14,155> [INFO ] IO TcpServer rx loop finished
+08:46:08,389> [INFO ] P inited
+08:46:08,390> [INFO ] Proxy opened, master=true
+08:46:09,343> [INFO ] IO TcpServer inited, port=63855
+08:46:09,344> [INFO ] IOTcpServerSett{port=63855, activeClientsCheckPeriod[mills]=5000, serverCodeName=, txLoopMills=500, rxLoopMills=1, logger=IngenicoTransitProt, maxCountOfOutMsgsInQueue=1000, outMsgSizePrintConstrain=-1, inMsgSizePrintConstrain=-1, startTxThread=true, startRxThread=true}
+09:01:50,698> [INFO ] P deinited
+09:01:50,699> [INFO ] Proxy closed
+09:01:50,701> [ERROR] IO TcpServer rx loop
+java.net.SocketException: Socket closed
+	at sun.nio.ch.NioSocketImpl.endAccept(Unknown Source) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.accept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.implAccept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.platformImplAccept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.implAccept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.implAccept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.accept(Unknown Source) ~[?:?]
+	at jCommons.comm.io.access.IOTcpServerAccess.receiveLoop(IOTcpServerAccess.java:122) [piknik-1.0.5-deps.jar:?]
+	at jCommons.comm.io.access.IOAccessBase$1.run(IOAccessBase.java:40) [piknik-1.0.5-deps.jar:?]
+	at java.lang.Thread.run(Unknown Source) [?:?]
+09:01:50,725> [INFO ] IO TcpServer rx loop finished
+09:02:42,321> [INFO ] P inited
+09:02:42,321> [INFO ] Proxy opened, master=true
+09:02:43,278> [INFO ] IO TcpServer inited, port=63855
+09:02:43,279> [INFO ] IOTcpServerSett{port=63855, activeClientsCheckPeriod[mills]=5000, serverCodeName=, txLoopMills=500, rxLoopMills=1, logger=IngenicoTransitProt, maxCountOfOutMsgsInQueue=1000, outMsgSizePrintConstrain=-1, inMsgSizePrintConstrain=-1, startTxThread=true, startRxThread=true}
+09:04:29,375> [INFO ] P deinited
+09:04:29,375> [INFO ] Proxy closed
+09:04:29,378> [ERROR] IO TcpServer rx loop
+java.net.SocketException: Socket closed
+	at sun.nio.ch.NioSocketImpl.endAccept(Unknown Source) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.accept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.implAccept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.platformImplAccept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.implAccept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.implAccept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.accept(Unknown Source) ~[?:?]
+	at jCommons.comm.io.access.IOTcpServerAccess.receiveLoop(IOTcpServerAccess.java:122) [piknik-1.0.5-deps.jar:?]
+	at jCommons.comm.io.access.IOAccessBase$1.run(IOAccessBase.java:40) [piknik-1.0.5-deps.jar:?]
+	at java.lang.Thread.run(Unknown Source) [?:?]
+09:04:29,397> [INFO ] IO TcpServer rx loop finished
+09:05:53,196> [INFO ] P inited
+09:05:53,197> [INFO ] Proxy opened, master=true
+09:05:54,163> [INFO ] IO TcpServer inited, port=63855
+09:05:54,164> [INFO ] IOTcpServerSett{port=63855, activeClientsCheckPeriod[mills]=5000, serverCodeName=, txLoopMills=500, rxLoopMills=1, logger=IngenicoTransitProt, maxCountOfOutMsgsInQueue=1000, outMsgSizePrintConstrain=-1, inMsgSizePrintConstrain=-1, startTxThread=true, startRxThread=true}
+09:09:15,896> [INFO ] P deinited
+09:09:15,897> [INFO ] Proxy closed
+09:09:15,897> [ERROR] IO TcpServer rx loop
+java.net.SocketException: Socket closed
+	at sun.nio.ch.NioSocketImpl.endAccept(Unknown Source) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.accept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.implAccept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.platformImplAccept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.implAccept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.implAccept(Unknown Source) ~[?:?]
+	at java.net.ServerSocket.accept(Unknown Source) ~[?:?]
+	at jCommons.comm.io.access.IOTcpServerAccess.receiveLoop(IOTcpServerAccess.java:122) [piknik-1.0.5-deps.jar:?]
+	at jCommons.comm.io.access.IOAccessBase$1.run(IOAccessBase.java:40) [piknik-1.0.5-deps.jar:?]
+	at java.lang.Thread.run(Unknown Source) [?:?]
+09:09:15,908> [INFO ] IO TcpServer rx loop finished
