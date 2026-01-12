@@ -1,125 +1,126 @@
-10:49:29.914 [main] INFO  pik.Piknik - Starting Piknik POS Controller Application...
-10:49:29.918 [main] DEBUG pik.dal.ConfigurationLoader - Application running from directory: /home/martins/temp/piknik
-10:49:29.919 [main] INFO  pik.dal.ConfigurationLoader - Loaded external configuration from: /home/martins/temp/piknik/config/application.properties
-10:49:29.919 [main] INFO  pik.dal.ConfigurationLoader - Loaded configuration from external file
-10:49:29.920 [main] DEBUG pik.dal.ConfigurationLoader - Loaded classpath configuration from 'config/application.properties'
-10:49:29.920 [main] DEBUG pik.dal.ConfigurationLoader - Loaded default values from classpath 'config/application.properties'
-10:49:29.920 [main] DEBUG pik.dal.ConfigurationLoader - Property 'printer.name' from configuration file: Epson_TM_T20III
-10:49:29.921 [main] DEBUG pik.dal.ConfigurationLoader - Property 'printer.connection.timeout' from configuration file: 10000
-10:49:29.921 [main] DEBUG pik.dal.ConfigurationLoader - Property 'printer.connection.type' from configuration file: NETWORK
-10:49:29.921 [main] DEBUG pik.dal.ConfigurationLoader - Property 'printer.ip' from configuration file: 10.0.1.97
-10:49:29.922 [main] DEBUG pik.dal.ConfigurationLoader - Property 'printer.network.port' from configuration file: 9100
-10:49:29.922 [main] INFO  pik.dal.ConfigurationService - Configured NETWORK printer: Epson_TM_T20III at 10.0.1.97:9100
-10:49:29.922 [main] DEBUG pik.dal.ConfigurationLoader - Property 'vfd.type' from configuration file: FV_2030B
-10:49:29.923 [main] DEBUG pik.dal.ConfigurationLoader - Property 'vfd.port' from configuration file: /dev/ttyUSB0
-10:49:29.923 [main] DEBUG pik.dal.ConfigurationLoader - Property 'vfd.baud' from configuration file: 9600
-10:49:29.923 [main] INFO  pik.dal.ConfigurationService - Configured VFD: displayType=FV_2030B, port=/dev/ttyUSB0, baud=9600
-10:49:29.923 [main] DEBUG pik.dal.ConfigurationLoader - Property 'server.port' from configuration file: 8080
-10:49:29.923 [main] DEBUG pik.dal.ConfigurationLoader - Property 'server.host' from configuration file: 127.0.0.1
-10:49:29.924 [main] DEBUG pik.dal.ConfigurationLoader - Property 'monitor.status.interval' from configuration file: 5000
-10:49:29.924 [main] DEBUG pik.dal.ConfigurationLoader - Property 'monitor.enabled' from configuration file: true
-10:49:29.924 [main] DEBUG pik.dal.ConfigurationLoader - Property 'server.thread.pool' from configuration file: 3
-10:49:29.924 [main] DEBUG pik.dal.ConfigurationLoader - Property 'server.startup.mode' from configuration file: LENIENT
-10:49:29.924 [main] DEBUG pik.dal.ConfigurationLoader - Property 'ingenico.connection.type' from configuration file: NETWORK
-10:49:29.925 [main] DEBUG pik.dal.ConfigurationLoader - Property 'IngenicoReaderIPAddress' from configuration file: 10.0.1.96
-10:49:29.925 [main] DEBUG pik.dal.ConfigurationLoader - Property 'IfsfTcpServerPort' from configuration file: 12710
-10:49:29.925 [main] DEBUG pik.dal.ConfigurationLoader - Property 'IfsfDevProxyTcpServerPort' from configuration file: 20007
-10:49:29.925 [main] DEBUG pik.dal.ConfigurationLoader - Property 'IngenicoTransitTcpServerPort' from configuration file: 63855
-10:49:29.925 [main] INFO  pik.dal.ConfigurationService - Configured NETWORK Ingenico reader: readerIP=10.0.1.96, ifsfPort=12710, transitPort=63855
-10:49:29.926 [main] INFO  pik.Piknik - Configuration loaded successfully
-10:49:29.926 [main] DEBUG pik.Piknik - Printer: PrinterConfiguration{type=NETWORK, name='Epson_TM_T20III', ip='10.0.1.97', port=9100, timeout=10000}
-10:49:29.931 [main] DEBUG pik.Piknik - VFD: VFDConfiguration{displayType=FV_2030B, port='/dev/ttyUSB0', baud=9600}
-10:49:29.932 [main] DEBUG pik.Piknik - Ingenico: IngenicoConfig{type=NETWORK, readerIP='10.0.1.96', ifsfPort=12710, ifsfDevProxyPort=20007, transitPort=63855}
-10:49:29.932 [main] DEBUG pik.Piknik - Server: ServerConfiguration{port=8080, host='127.0.0.1', monitoring=true, startupMode=LENIENT: At least one service must initialize}
-10:49:30.217 [main] INFO  pik.domain.IntegratedController - Protocol controllers registered with MasterLoop
-10:49:30.222 [main] DEBUG pik.domain.thprinter.PrinterService - Added status listener: IntegratedController$$Lambda/0x0000000073196600
-10:49:30.223 [main] DEBUG pik.domain.ingenico.IngenicoService - Added Ingenico status listener: IntegratedController$$Lambda/0x0000000073196ed0
-10:49:30.223 [main] INFO  pik.domain.IntegratedController - IntegratedController initialized with startup mode: LENIENT: At least one service must initialize
-10:49:30.223 [main] INFO  pik.domain.IntegratedController - ========================================
-10:49:30.224 [main] INFO  pik.domain.IntegratedController - Starting Integrated Controller
-10:49:30.224 [main] INFO  pik.domain.IntegratedController - Startup Mode: LENIENT: At least one service must initialize
-10:49:30.224 [main] INFO  pik.domain.IntegratedController - ========================================
-10:49:30.224 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - Initializing Printer service...
-10:49:30.224 [main] INFO  pik.domain.thprinter.PrinterService - Initializing ESC/POS printer service with config: PrinterConfiguration{type=NETWORK, name='Epson_TM_T20III', ip='10.0.1.97', port=9100, timeout=10000}
-10:49:30.224 [main] DEBUG pik.domain.thprinter.PrinterService - Printer state transition: UNINITIALIZED -> OPENING
-10:49:30.225 [main] INFO  pik.domain.thprinter.PrinterService - Connecting to network printer: 10.0.1.97:9100
-10:49:30.330 [main] DEBUG pik.domain.thprinter.PrinterService - Socket connected successfully to 10.0.1.97:9100
-10:49:30.331 [main] DEBUG pik.domain.thprinter.PrinterService - Raw output stream created
-10:49:30.332 [main] DEBUG pik.domain.thprinter.PrinterService - Printer state transition: OPENING -> OPENED
-10:49:30.339 [main] DEBUG pik.domain.thprinter.PrinterService - EscPos instance created (stream is now wrapped)
-10:49:30.341 [main] DEBUG pik.domain.thprinter.PrinterService - Character code table set to CP852 (Latin 2)
-10:49:30.341 [main] DEBUG pik.domain.thprinter.PrinterService - Printer state transition: OPENED -> ENABLED
-10:49:30.342 [main] DEBUG pik.domain.thprinter.PrinterService - Printer initialized
-10:49:30.342 [main] DEBUG pik.domain.thprinter.PrinterService - Character encoding configured to CP852 (Latin 2)
-10:49:30.372 [main] DEBUG pik.domain.IntegratedController - Broadcast printer status update to printer SSE clients
-10:49:30.372 [main] DEBUG pik.domain.thprinter.PrinterService - Status updated: PrinterStatus{online=false, ready=false, coverOpen=false, paperEmpty=false, paperNearEnd=false, error=true}
-10:49:30.372 [main] DEBUG pik.domain.thprinter.PrinterService - Printer state transition: ENABLED -> READY
-10:49:30.373 [main] INFO  pik.domain.thprinter.PrinterService - ESC/POS printer service initialized successfully
-10:49:30.373 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - ✓ Printer service initialized successfully in 149ms
-10:49:30.374 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - Initializing VFD service...
-10:49:30.374 [main] INFO  pik.domain.vfd.VFDService - Initializing VFD display with config: VFDConfiguration{displayType=FV_2030B, port='/dev/ttyUSB0', baud=9600}
-10:49:30.376 [main] DEBUG pik.domain.vfd.VFDService - Created display instance: FV-2030B
-10:49:30.388 [main] INFO  pik.domain.vfd.AbstractVFDDisplay - Connected to FV-2030B at /dev/ttyUSB0 (9600 baud)
-10:49:30.890 [main] DEBUG pik.domain.vfd.FV2030BDisplay - FV-2030B display cleared
-10:49:31.092 [main] INFO  pik.domain.vfd.FV2030BDisplay - FV-2030B display initialized successfully
-10:49:31.097 [main] DEBUG pik.domain.IntegratedController - Broadcast VFD status update to VFD SSE clients
-10:49:31.097 [main] INFO  pik.domain.vfd.VFDService - VFD display initialized successfully
-10:49:31.098 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - ✓ VFD service initialized successfully in 724ms
-10:49:31.098 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - Initializing Ingenico reader service...
-10:49:31.099 [main] INFO  pik.domain.ingenico.IngenicoService - Initializing Ingenico reader service with config: IngenicoConfig{type=NETWORK, readerIP='10.0.1.96', ifsfPort=12710, ifsfDevProxyPort=20007, transitPort=63855}
-10:49:31.100 [main] INFO  pik.domain.ingenico.IngenicoService - Initializing Ingenico reader in NETWORK mode (reader IP: 10.0.1.96)
-10:49:31.113 [main] DEBUG pik.domain.ingenico.IngenicoService - Subscribed to Ingenico device events
-10:49:31.114 [main] INFO  pik.domain.ingenico.IngenicoService - Ingenico reader service initialized successfully in NETWORK mode
-10:49:31.114 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - ✓ Ingenico service initialized successfully in 15ms
-10:49:31.125 [main] INFO  App - IOGeneral inited
-10:49:31.127 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - Service initialization complete: 3/3 services successful
-10:49:31.128 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - ✓ LENIENT mode requirement met: all services initialized
-10:49:31.129 [main] INFO  pik.domain.IntegratedController - MasterLoop started - protocol controllers are now running
-10:49:31.129 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - Starting printer status monitoring (printer initialized)...
-10:49:31.129 [MasterLoop_prot] INFO  App - Master loop started
-10:49:31.129 [main] INFO  pik.domain.thprinter.StatusMonitorService - Starting printer status monitoring
-10:49:31.130 [main] INFO  pik.domain.thprinter.StatusMonitorService - Status monitoring started
-10:49:31.131 [main] INFO  pik.domain.orchestration.SSEManager - SSE cleanup task started
-10:49:31.141 [main] INFO  pik.domain.orchestration.SSEManager - SSE heartbeat task started
-10:49:31.141 [main] INFO  pik.domain.orchestration.WebServerManager - Starting web server on port 8080...
-10:49:31.144 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
-10:49:31.218 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/]
-10:49:31.221 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/docs]
-10:49:31.221 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/test]
-10:49:31.222 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/testclient]
-10:49:31.223 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/printer/status]
-10:49:31.224 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/printer/health]
-10:49:31.224 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/printer/print]
-10:49:31.225 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/printer/print/text]
-10:49:31.226 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/printer/cut]
-10:49:31.226 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/printer/test]
-10:49:31.227 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/printer/events/status]
-10:49:31.229 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/vfd/status]
-10:49:31.229 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/vfd/health]
-10:49:31.230 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/vfd/info]
-10:49:31.231 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/vfd/display]
-10:49:31.231 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/vfd/clear]
-10:49:31.232 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/vfd/cursor/position]
-10:49:31.233 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/vfd/cursor/home]
-10:49:31.233 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/vfd/cursor/show]
-10:49:31.234 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/vfd/brightness]
-10:49:31.234 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/vfd/command]
-10:49:31.235 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/vfd/demo]
-10:49:31.235 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/vfd/reconnect]
-10:49:31.236 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/vfd/events/status]
-10:49:31.237 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/ingenico/status]
-10:49:31.238 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/ingenico/health]
-10:49:31.238 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/ingenico/info]
-10:49:31.239 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/ingenico/config]
-10:49:31.239 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/ingenico/test]
-10:49:31.240 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/ingenico/diagnostics]
-10:49:31.240 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/ingenico/events/status]
-10:49:31.244 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: BEFORE[*]
-10:49:31.245 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: AFTER[*]
-10:49:31.282 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:49:31.282 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:49:31.342 [main] INFO  io.javalin.Javalin - Starting Javalin ...
-10:49:31.419 [main] INFO  io.javalin.Javalin - 
+11:38:54.265 [main] INFO  pik.Piknik - Starting Piknik POS Controller Application...
+11:38:54.273 [main] DEBUG pik.dal.ConfigurationLoader - Checking explicit config directory from system property: /home/martins/temp/piknik/config/application.properties
+11:38:54.274 [main] INFO  pik.dal.ConfigurationLoader - Loaded external configuration from system property 'config.dir': /home/martins/temp/piknik/config/application.properties
+11:38:54.275 [main] INFO  pik.dal.ConfigurationLoader - Loaded configuration from external file
+11:38:54.276 [main] DEBUG pik.dal.ConfigurationLoader - Loaded classpath configuration from 'config/application.properties'
+11:38:54.277 [main] DEBUG pik.dal.ConfigurationLoader - Loaded default values from classpath 'config/application.properties'
+11:38:54.277 [main] DEBUG pik.dal.ConfigurationLoader - Property 'printer.name' from configuration file: Epson_TM_T20III
+11:38:54.277 [main] DEBUG pik.dal.ConfigurationLoader - Property 'printer.connection.timeout' from configuration file: 10000
+11:38:54.277 [main] DEBUG pik.dal.ConfigurationLoader - Property 'printer.connection.type' from configuration file: NETWORK
+11:38:54.279 [main] DEBUG pik.dal.ConfigurationLoader - Property 'printer.ip' from configuration file: 10.0.1.97
+11:38:54.279 [main] DEBUG pik.dal.ConfigurationLoader - Property 'printer.network.port' from configuration file: 9100
+11:38:54.280 [main] INFO  pik.dal.ConfigurationService - Configured NETWORK printer: Epson_TM_T20III at 10.0.1.97:9100
+11:38:54.280 [main] DEBUG pik.dal.ConfigurationLoader - Property 'vfd.type' from configuration file: FV_2030B
+11:38:54.281 [main] DEBUG pik.dal.ConfigurationLoader - Property 'vfd.port' from configuration file: /dev/ttyUSB0
+11:38:54.281 [main] DEBUG pik.dal.ConfigurationLoader - Property 'vfd.baud' from configuration file: 9600
+11:38:54.282 [main] INFO  pik.dal.ConfigurationService - Configured VFD: displayType=FV_2030B, port=/dev/ttyUSB0, baud=9600
+11:38:54.282 [main] DEBUG pik.dal.ConfigurationLoader - Property 'server.port' from configuration file: 8080
+11:38:54.282 [main] DEBUG pik.dal.ConfigurationLoader - Property 'server.host' from configuration file: 127.0.0.1
+11:38:54.283 [main] DEBUG pik.dal.ConfigurationLoader - Property 'monitor.status.interval' from configuration file: 5000
+11:38:54.283 [main] DEBUG pik.dal.ConfigurationLoader - Property 'monitor.enabled' from configuration file: true
+11:38:54.283 [main] DEBUG pik.dal.ConfigurationLoader - Property 'server.thread.pool' from configuration file: 3
+11:38:54.283 [main] DEBUG pik.dal.ConfigurationLoader - Property 'server.startup.mode' from configuration file: LENIENT
+11:38:54.284 [main] DEBUG pik.dal.ConfigurationLoader - Property 'ingenico.connection.type' from configuration file: NETWORK
+11:38:54.285 [main] DEBUG pik.dal.ConfigurationLoader - Property 'IngenicoReaderIPAddress' from configuration file: 10.0.1.96
+11:38:54.285 [main] DEBUG pik.dal.ConfigurationLoader - Property 'IfsfTcpServerPort' from configuration file: 12710
+11:38:54.285 [main] DEBUG pik.dal.ConfigurationLoader - Property 'IfsfDevProxyTcpServerPort' from configuration file: 20007
+11:38:54.286 [main] DEBUG pik.dal.ConfigurationLoader - Property 'IngenicoTransitTcpServerPort' from configuration file: 63855
+11:38:54.286 [main] INFO  pik.dal.ConfigurationService - Configured NETWORK Ingenico reader: readerIP=10.0.1.96, ifsfPort=12710, transitPort=63855
+11:38:54.287 [main] INFO  pik.Piknik - Configuration loaded successfully
+11:38:54.287 [main] DEBUG pik.Piknik - Printer: PrinterConfiguration{type=NETWORK, name='Epson_TM_T20III', ip='10.0.1.97', port=9100, timeout=10000}
+11:38:54.300 [main] DEBUG pik.Piknik - VFD: VFDConfiguration{displayType=FV_2030B, port='/dev/ttyUSB0', baud=9600}
+11:38:54.301 [main] DEBUG pik.Piknik - Ingenico: IngenicoConfig{type=NETWORK, readerIP='10.0.1.96', ifsfPort=12710, ifsfDevProxyPort=20007, transitPort=63855}
+11:38:54.301 [main] DEBUG pik.Piknik - Server: ServerConfiguration{port=8080, host='127.0.0.1', monitoring=true, startupMode=LENIENT: At least one service must initialize}
+11:38:54.730 [main] INFO  pik.domain.IntegratedController - Protocol controllers registered with MasterLoop
+11:38:54.738 [main] DEBUG pik.domain.thprinter.PrinterService - Added status listener: IntegratedController$$Lambda/0x0000000051254200
+11:38:54.740 [main] DEBUG pik.domain.ingenico.IngenicoService - Added Ingenico status listener: IntegratedController$$Lambda/0x0000000051254ad0
+11:38:54.740 [main] INFO  pik.domain.IntegratedController - IntegratedController initialized with startup mode: LENIENT: At least one service must initialize
+11:38:54.741 [main] INFO  pik.domain.IntegratedController - ========================================
+11:38:54.741 [main] INFO  pik.domain.IntegratedController - Starting Integrated Controller
+11:38:54.741 [main] INFO  pik.domain.IntegratedController - Startup Mode: LENIENT: At least one service must initialize
+11:38:54.741 [main] INFO  pik.domain.IntegratedController - ========================================
+11:38:54.741 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - Initializing Printer service...
+11:38:54.742 [main] INFO  pik.domain.thprinter.PrinterService - Initializing ESC/POS printer service with config: PrinterConfiguration{type=NETWORK, name='Epson_TM_T20III', ip='10.0.1.97', port=9100, timeout=10000}
+11:38:54.742 [main] DEBUG pik.domain.thprinter.PrinterService - Printer state transition: UNINITIALIZED -> OPENING
+11:38:54.743 [main] INFO  pik.domain.thprinter.PrinterService - Connecting to network printer: 10.0.1.97:9100
+11:38:54.858 [main] DEBUG pik.domain.thprinter.PrinterService - Socket connected successfully to 10.0.1.97:9100
+11:38:54.858 [main] DEBUG pik.domain.thprinter.PrinterService - Raw output stream created
+11:38:54.859 [main] DEBUG pik.domain.thprinter.PrinterService - Printer state transition: OPENING -> OPENED
+11:38:54.862 [main] DEBUG pik.domain.thprinter.PrinterService - EscPos instance created (stream is now wrapped)
+11:38:54.862 [main] DEBUG pik.domain.thprinter.PrinterService - Character code table set to CP852 (Latin 2)
+11:38:54.863 [main] DEBUG pik.domain.thprinter.PrinterService - Printer state transition: OPENED -> ENABLED
+11:38:54.863 [main] DEBUG pik.domain.thprinter.PrinterService - Printer initialized
+11:38:54.863 [main] DEBUG pik.domain.thprinter.PrinterService - Character encoding configured to CP852 (Latin 2)
+11:38:54.879 [main] DEBUG pik.domain.IntegratedController - Broadcast printer status update to printer SSE clients
+11:38:54.879 [main] DEBUG pik.domain.thprinter.PrinterService - Status updated: PrinterStatus{online=false, ready=false, coverOpen=false, paperEmpty=false, paperNearEnd=false, error=true}
+11:38:54.880 [main] DEBUG pik.domain.thprinter.PrinterService - Printer state transition: ENABLED -> READY
+11:38:54.880 [main] INFO  pik.domain.thprinter.PrinterService - ESC/POS printer service initialized successfully
+11:38:54.880 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - ✓ Printer service initialized successfully in 138ms
+11:38:54.881 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - Initializing VFD service...
+11:38:54.882 [main] INFO  pik.domain.vfd.VFDService - Initializing VFD display with config: VFDConfiguration{displayType=FV_2030B, port='/dev/ttyUSB0', baud=9600}
+11:38:54.885 [main] DEBUG pik.domain.vfd.VFDService - Created display instance: FV-2030B
+11:38:54.900 [main] INFO  pik.domain.vfd.AbstractVFDDisplay - Connected to FV-2030B at /dev/ttyUSB0 (9600 baud)
+11:38:55.403 [main] DEBUG pik.domain.vfd.FV2030BDisplay - FV-2030B display cleared
+11:38:55.604 [main] INFO  pik.domain.vfd.FV2030BDisplay - FV-2030B display initialized successfully
+11:38:55.609 [main] DEBUG pik.domain.IntegratedController - Broadcast VFD status update to VFD SSE clients
+11:38:55.610 [main] INFO  pik.domain.vfd.VFDService - VFD display initialized successfully
+11:38:55.610 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - ✓ VFD service initialized successfully in 728ms
+11:38:55.611 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - Initializing Ingenico reader service...
+11:38:55.612 [main] INFO  pik.domain.ingenico.IngenicoService - Initializing Ingenico reader service with config: IngenicoConfig{type=NETWORK, readerIP='10.0.1.96', ifsfPort=12710, ifsfDevProxyPort=20007, transitPort=63855}
+11:38:55.613 [main] INFO  pik.domain.ingenico.IngenicoService - Initializing Ingenico reader in NETWORK mode (reader IP: 10.0.1.96)
+11:38:55.630 [main] DEBUG pik.domain.ingenico.IngenicoService - Subscribed to Ingenico device events
+11:38:55.631 [main] INFO  pik.domain.ingenico.IngenicoService - Ingenico reader service initialized successfully in NETWORK mode
+11:38:55.632 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - ✓ Ingenico service initialized successfully in 20ms
+11:38:55.644 [main] INFO  App - IOGeneral inited
+11:38:55.647 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - Service initialization complete: 3/3 services successful
+11:38:55.648 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - ✓ LENIENT mode requirement met: all services initialized
+11:38:55.649 [main] INFO  pik.domain.IntegratedController - MasterLoop started - protocol controllers are now running
+11:38:55.649 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - Starting printer status monitoring (printer initialized)...
+11:38:55.649 [MasterLoop_prot] INFO  App - Master loop started
+11:38:55.649 [main] INFO  pik.domain.thprinter.StatusMonitorService - Starting printer status monitoring
+11:38:55.651 [main] INFO  pik.domain.thprinter.StatusMonitorService - Status monitoring started
+11:38:55.652 [main] INFO  pik.domain.orchestration.SSEManager - SSE cleanup task started
+11:38:55.654 [main] INFO  pik.domain.orchestration.SSEManager - SSE heartbeat task started
+11:38:55.654 [main] INFO  pik.domain.orchestration.WebServerManager - Starting web server on port 8080...
+11:38:55.658 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
+11:38:55.749 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/]
+11:38:55.753 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/docs]
+11:38:55.753 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/test]
+11:38:55.754 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/testclient]
+11:38:55.756 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/printer/status]
+11:38:55.756 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/printer/health]
+11:38:55.757 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/printer/print]
+11:38:55.758 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/printer/print/text]
+11:38:55.758 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/printer/cut]
+11:38:55.759 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/printer/test]
+11:38:55.761 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/printer/events/status]
+11:38:55.763 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/vfd/status]
+11:38:55.764 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/vfd/health]
+11:38:55.765 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/vfd/info]
+11:38:55.765 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/vfd/display]
+11:38:55.766 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/vfd/clear]
+11:38:55.767 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/vfd/cursor/position]
+11:38:55.768 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/vfd/cursor/home]
+11:38:55.769 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/vfd/cursor/show]
+11:38:55.770 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/vfd/brightness]
+11:38:55.770 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/vfd/command]
+11:38:55.771 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/vfd/demo]
+11:38:55.772 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/vfd/reconnect]
+11:38:55.773 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/vfd/events/status]
+11:38:55.775 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/ingenico/status]
+11:38:55.776 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/ingenico/health]
+11:38:55.777 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/ingenico/info]
+11:38:55.778 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/ingenico/config]
+11:38:55.778 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/api/ingenico/test]
+11:38:55.779 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/ingenico/diagnostics]
+11:38:55.780 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/api/ingenico/events/status]
+11:38:55.784 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: BEFORE[*]
+11:38:55.785 [main] INFO  io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: AFTER[*]
+11:38:55.803 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
+11:38:55.803 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
+11:38:55.915 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+11:38:56.004 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
+11:38:56.013 [main] INFO  io.javalin.Javalin - 
        __                  ___           _____
       / /___ __   ______ _/ (_)___      / ___/
  __  / / __ `/ | / / __ `/ / / __ \    / __ \
@@ -128,99 +129,164 @@
 
        https://javalin.io/documentation
 
-10:49:31.419 [main] INFO  io.javalin.Javalin - Javalin started in 151ms \o/
-10:49:31.421 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
-10:49:31.429 [main] INFO  io.javalin.Javalin - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 203 days old. Consider checking for a newer version.).
-10:49:31.429 [main] INFO  pik.domain.orchestration.WebServerManager - ✓ Web server started successfully
-10:49:31.430 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - ========================================
-10:49:31.430 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - Startup Complete - Application Status:
-10:49:31.430 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - ========================================
-10:49:31.431 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - Printer: SUCCESS (initialized in 149ms)
-10:49:31.431 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - VFD: SUCCESS (initialized in 724ms)
-10:49:31.431 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - Ingenico: SUCCESS (initialized in 15ms)
-10:49:31.431 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - Web Server: RUNNING on port 8080
-10:49:31.431 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - API Documentation: http://127.0.0.1:8080/docs
-10:49:31.431 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - ========================================
-10:49:31.483 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:49:31.604 [IORxIOTcpServerAccessLoop_IfsfProt] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
-10:49:31.684 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
-10:49:31.816 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
-10:49:31.816 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
-10:49:31.884 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
-10:49:31.884 [pool-2-thread-1] DEBUG pik.domain.IntegratedController - Broadcast printer status update to printer SSE clients
-10:49:31.885 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - Status updated: PrinterStatus{online=true, ready=true, coverOpen=false, paperEmpty=false, paperNearEnd=false, error=false}
-10:49:33.234 [IORxIOTcpServerAccessLoop_IngenicoTransitProt] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
-10:49:33.236 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
-10:49:33.439 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
-10:49:33.440 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
-10:49:33.441 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
-10:49:33.515 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
-10:49:34.211 [MasterLoop_prot] DEBUG pik.domain.ingenico.IngenicoService - formatSamType: expected=BUS, found=- (null)
-10:49:34.213 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
-10:49:34.527 [MasterLoop_prot] DEBUG pik.domain.ingenico.IngenicoService - formatSamType: expected=BUS, found=- (null)
-10:49:34.527 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
-10:49:34.527 [MasterLoop_prot] DEBUG pik.domain.ingenico.IngenicoService - formatSamType: expected=BUS, found=- (null)
-10:49:34.528 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
-10:49:34.530 [MasterLoop_prot] DEBUG pik.domain.ingenico.IngenicoService - formatSamType: expected=BUS, found=- (null)
-10:49:34.531 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
-10:49:37.036 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:49:37.036 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:49:37.238 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:49:37.439 [pool-2-thread-1] WARN  pik.domain.thprinter.PrinterService - DLE EOT 3 no response - printer may be offline
-10:49:37.440 [pool-2-thread-1] ERROR pik.domain.thprinter.PrinterService - Failed to query real-time status type 3: No response to DLE EOT 3 - printer offline or not responding
-10:49:37.441 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 query failed (non-critical), skipping: No response to DLE EOT 3 - printer offline or not responding
-10:49:37.642 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
-10:49:42.794 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:49:42.794 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:49:42.994 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:49:43.195 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
-10:49:43.396 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
-10:49:45.320 [JettyServerThreadPool-54] DEBUG pik.domain.orchestration.WebServerManager - Loaded test client from external file: res/html/testclient.html
-10:49:45.342 [JettyServerThreadPool-54] INFO  io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+11:38:56.014 [main] INFO  io.javalin.Javalin - Javalin started in 202ms \o/
+11:38:56.016 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+11:38:56.028 [main] INFO  io.javalin.Javalin - You are running Javalin 6.7.0 (released June 22, 2025. Your Javalin version is 203 days old. Consider checking for a newer version.).
+11:38:56.029 [main] INFO  pik.domain.orchestration.WebServerManager - ✓ Web server started successfully
+11:38:56.030 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - ========================================
+11:38:56.030 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - Startup Complete - Application Status:
+11:38:56.030 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - ========================================
+11:38:56.030 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - Printer: SUCCESS (initialized in 138ms)
+11:38:56.030 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - VFD: SUCCESS (initialized in 728ms)
+11:38:56.030 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - Ingenico: SUCCESS (initialized in 20ms)
+11:38:56.030 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - Web Server: RUNNING on port 8080
+11:38:56.031 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - API Documentation: http://127.0.0.1:8080/docs
+11:38:56.031 [main] INFO  pik.domain.orchestration.ServiceOrchestrator - ========================================
+11:38:56.204 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
+11:38:56.406 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
+11:38:56.406 [pool-2-thread-1] DEBUG pik.domain.IntegratedController - Broadcast printer status update to printer SSE clients
+11:38:56.407 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - Status updated: PrinterStatus{online=true, ready=true, coverOpen=false, paperEmpty=false, paperNearEnd=false, error=false}
+11:38:56.765 [IORxIOTcpServerAccessLoop_IngenicoTransitProt] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
+11:38:56.766 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
+11:38:56.975 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
+11:38:56.976 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
+11:38:56.977 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
+11:38:57.061 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
+11:38:59.918 [MasterLoop_prot] DEBUG pik.domain.ingenico.IngenicoService - formatSamType: expected=BUS, found=- (null)
+11:38:59.920 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
+11:39:00.235 [MasterLoop_prot] DEBUG pik.domain.ingenico.IngenicoService - formatSamType: expected=BUS, found=- (null)
+11:39:00.236 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
+11:39:01.559 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
+11:39:01.560 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
+11:39:01.761 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
+11:39:01.955 [IORxIOTcpServerAccessLoop_IfsfProt] DEBUG pik.domain.ingenico.IngenicoService - formatSamType: expected=BUS, found=- (null)
+11:39:01.957 [IORxIOTcpServerAccessLoop_IfsfProt] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
+11:39:01.962 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
+11:39:02.163 [pool-2-thread-1] WARN  pik.domain.thprinter.PrinterService - DLE EOT 4 no response - printer may be offline
+11:39:02.163 [pool-2-thread-1] ERROR pik.domain.thprinter.PrinterService - Failed to query real-time status type 4: No response to DLE EOT 4 - printer offline or not responding
+11:39:02.163 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 query failed (non-critical), skipping: No response to DLE EOT 4 - printer offline or not responding
+11:39:02.789 [MasterLoop_prot] DEBUG pik.domain.ingenico.IngenicoService - formatSamType: expected=BUS, found=- (null)
+11:39:02.791 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
+11:39:03.292 [MasterLoop_prot] DEBUG pik.domain.ingenico.IngenicoService - formatSamType: expected=BUS, found=- (null)
+11:39:03.293 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
+11:39:03.293 [MasterLoop_prot] DEBUG pik.domain.ingenico.IngenicoService - formatSamType: expected=BUS, found=- (null)
+11:39:03.294 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
+11:39:03.645 [MasterLoop_prot] DEBUG pik.domain.ingenico.IngenicoService - formatSamType: expected=BUS, found=- (null)
+11:39:03.647 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
+11:39:07.210 [JettyServerThreadPool-59] DEBUG pik.domain.orchestration.WebServerManager - Loaded test client from external file: res/html/testclient.html
+11:39:07.240 [JettyServerThreadPool-59] INFO  io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
 Request: GET [/test]
-    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@3a56660b
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@30ade440
     Headers: {Accept=text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8, Priority=u=0, i, User-Agent=Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0, Connection=keep-alive, Sec-Fetch-Dest=document, Sec-Fetch-Site=none, Host=127.0.0.1:8080, Accept-Encoding=gzip, deflate, br, zstd, DNT=1, Sec-Fetch-Mode=navigate, Upgrade-Insecure-Requests=1, Sec-GPC=1, Sec-Fetch-User=?1, Accept-Language=cs,en-GB;q=0.7,en;q=0.3}
     Cookies: {}
     Body: 
     QueryString: null
     QueryParams: {}
     FormParams: {}
-Response: [200 OK], execution took 19.64 ms
-    Headers: {Content-Encoding=gzip, Date=Mon, 12 Jan 2026 09:49:45 GMT, Content-Type=text/html}
+Response: [200 OK], execution took 27.41 ms
+    Headers: {Content-Encoding=gzip, Date=Mon, 12 Jan 2026 10:39:07 GMT, Content-Type=text/html}
     Body is gzipped (38437 bytes, not logged)
 ----------------------------------------------------------------------------------
-10:49:45.540 [JavalinDefaultAsyncThreadPool-0] INFO  pik.domain.thprinter.PrinterController - New printer SSE client connecting: printer_693e2868-49cf-41d4-93a6-8983a180c760
-10:49:45.541 [JavalinDefaultAsyncThreadPool-2] INFO  pik.domain.vfd.VFDController - New VFD SSE client connecting: vfd_dec18e41-4921-49e4-bc7d-b028b7818291
-10:49:45.541 [JavalinDefaultAsyncThreadPool-0] INFO  pik.domain.thprinter.PrinterController - Printer SSE client registered: printer_693e2868-49cf-41d4-93a6-8983a180c760 (total clients: 1)
-10:49:45.541 [JavalinDefaultAsyncThreadPool-2] INFO  pik.domain.vfd.VFDController - VFD SSE client registered: vfd_dec18e41-4921-49e4-bc7d-b028b7818291 (total clients: 1)
-10:49:45.541 [JavalinDefaultAsyncThreadPool-1] INFO  pik.domain.ingenico.IngenicoController - New Ingenico SSE client connecting: ingenico_81248c05-e57c-4163-bd14-7756de7b4d1e
-10:49:45.542 [JavalinDefaultAsyncThreadPool-1] INFO  pik.domain.ingenico.IngenicoController - Ingenico SSE client registered: ingenico_81248c05-e57c-4163-bd14-7756de7b4d1e (total clients: 1)
-10:49:45.542 [JavalinDefaultAsyncThreadPool-2] DEBUG pik.domain.vfd.VFDController - Sending initial VFD status: {"connected":true,"error":false,"displayModel":"FV-2030B","lastUpdate":1768211371093,"dummyMode":false}
-10:49:45.542 [JavalinDefaultAsyncThreadPool-0] DEBUG pik.domain.thprinter.PrinterController - Sending initial printer status: {"online":true,"ready":true,"coverOpen":false,"paperEmpty":false,"paperNearEnd":false,"error":false,"powerState":1,"lastUpdate":1768211371884,"dummyMode":false}
-10:49:45.545 [JavalinDefaultAsyncThreadPool-1] DEBUG pik.domain.ingenico.IngenicoController - Sending initial Ingenico status: {"initState":"DONE","initialized":true,"ifsfConnected":true,"ifsfAppAlive":true,"terminalId":"TEST4403","transitConnected":true,"transitAppAlive":true,"transitTerminalStatusCode":0,"transitTerminalStatus":"IDLE","samDukDetected":true,"samDukStatus":"INIT_VERIFYING_SAM_DETECTED","samNumber":"typ\u003dDUK, slot_index\u003d3, sam_number\u003d","samType":"expected - BUS, found - -","networkId":203421,"samAtr":"typ\u003dDUK, slot_index\u003d3, ATR: 3B F8 18 00 FF 81 31 FE 45 4A 43 4F 50 76 32 34 31 43 ","slotIndex":3,"slotStatus":"typ\u003dDUK, slot_index\u003d3, slot_status\u003dpower_on","unlockStatus":"typ\u003dDUK, slot_index\u003d3, unlock_status\u003dundefined","operational":true,"error":false,"lastUpdate":1768211374530,"dummyMode":false}
-10:49:45.545 [JavalinDefaultAsyncThreadPool-0] INFO  pik.domain.thprinter.PrinterController - Printer SSE client printer_693e2868-49cf-41d4-93a6-8983a180c760 initialized with current status
-10:49:45.546 [JavalinDefaultAsyncThreadPool-0] DEBUG pik.domain.thprinter.PrinterController - Printer SSE client printer_693e2868-49cf-41d4-93a6-8983a180c760 connection kept alive
-10:49:45.546 [JavalinDefaultAsyncThreadPool-1] INFO  pik.domain.ingenico.IngenicoController - Ingenico SSE client ingenico_81248c05-e57c-4163-bd14-7756de7b4d1e initialized with current status
-10:49:45.546 [JavalinDefaultAsyncThreadPool-1] DEBUG pik.domain.ingenico.IngenicoController - Ingenico SSE client ingenico_81248c05-e57c-4163-bd14-7756de7b4d1e connection kept alive
-10:49:45.547 [JavalinDefaultAsyncThreadPool-2] INFO  pik.domain.vfd.VFDController - VFD SSE client vfd_dec18e41-4921-49e4-bc7d-b028b7818291 initialized with current status
-10:49:45.547 [JavalinDefaultAsyncThreadPool-2] DEBUG pik.domain.vfd.VFDController - VFD SSE client vfd_dec18e41-4921-49e4-bc7d-b028b7818291 connection kept alive
-10:49:48.547 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:49:48.547 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:49:48.748 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:49:48.949 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
-10:49:49.150 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
-10:49:52.067 [JettyServerThreadPool-47] INFO  io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+11:39:07.314 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
+11:39:07.314 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
+11:39:07.403 [JavalinDefaultAsyncThreadPool-1] INFO  pik.domain.thprinter.PrinterController - New printer SSE client connecting: printer_bf198a6f-9d83-42fe-9c2d-6ecd2a291e0f
+11:39:07.403 [JavalinDefaultAsyncThreadPool-0] INFO  pik.domain.vfd.VFDController - New VFD SSE client connecting: vfd_d9ad7bd1-c94d-4a35-a1e9-f3314c095040
+11:39:07.403 [JavalinDefaultAsyncThreadPool-2] INFO  pik.domain.ingenico.IngenicoController - New Ingenico SSE client connecting: ingenico_8442dd40-2182-4dc4-bec0-2cbf323fb150
+11:39:07.405 [JavalinDefaultAsyncThreadPool-0] INFO  pik.domain.vfd.VFDController - VFD SSE client registered: vfd_d9ad7bd1-c94d-4a35-a1e9-f3314c095040 (total clients: 1)
+11:39:07.405 [JavalinDefaultAsyncThreadPool-1] INFO  pik.domain.thprinter.PrinterController - Printer SSE client registered: printer_bf198a6f-9d83-42fe-9c2d-6ecd2a291e0f (total clients: 1)
+11:39:07.405 [JavalinDefaultAsyncThreadPool-2] INFO  pik.domain.ingenico.IngenicoController - Ingenico SSE client registered: ingenico_8442dd40-2182-4dc4-bec0-2cbf323fb150 (total clients: 1)
+11:39:07.406 [JavalinDefaultAsyncThreadPool-0] DEBUG pik.domain.vfd.VFDController - Sending initial VFD status: {"connected":true,"error":false,"displayModel":"FV-2030B","lastUpdate":1768214335605,"dummyMode":false}
+11:39:07.407 [JavalinDefaultAsyncThreadPool-2] DEBUG pik.domain.ingenico.IngenicoController - Sending initial Ingenico status: {"initState":"DONE","initialized":true,"ifsfConnected":true,"ifsfAppAlive":true,"terminalId":"TEST4403","transitConnected":true,"transitAppAlive":true,"transitTerminalStatusCode":0,"transitTerminalStatus":"IDLE","samDukDetected":true,"samDukStatus":"INIT_VERIFYING_SAM_DETECTED","samNumber":"typ\u003dDUK, slot_index\u003d3, sam_number\u003d","samType":"expected - BUS, found - -","networkId":203421,"samAtr":"typ\u003dDUK, slot_index\u003d3, ATR: 3B F8 18 00 FF 81 31 FE 45 4A 43 4F 50 76 32 34 31 43 ","slotIndex":3,"slotStatus":"typ\u003dDUK, slot_index\u003d3, slot_status\u003dpower_on","unlockStatus":"typ\u003dDUK, slot_index\u003d3, unlock_status\u003dundefined","operational":true,"error":false,"lastUpdate":1768214343646,"dummyMode":false}
+11:39:07.411 [JavalinDefaultAsyncThreadPool-0] INFO  pik.domain.vfd.VFDController - VFD SSE client vfd_d9ad7bd1-c94d-4a35-a1e9-f3314c095040 initialized with current status
+11:39:07.412 [JavalinDefaultAsyncThreadPool-2] INFO  pik.domain.ingenico.IngenicoController - Ingenico SSE client ingenico_8442dd40-2182-4dc4-bec0-2cbf323fb150 initialized with current status
+11:39:07.412 [JavalinDefaultAsyncThreadPool-0] DEBUG pik.domain.vfd.VFDController - VFD SSE client vfd_d9ad7bd1-c94d-4a35-a1e9-f3314c095040 connection kept alive
+11:39:07.413 [JavalinDefaultAsyncThreadPool-2] DEBUG pik.domain.ingenico.IngenicoController - Ingenico SSE client ingenico_8442dd40-2182-4dc4-bec0-2cbf323fb150 connection kept alive
+11:39:07.515 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
+11:39:07.715 [pool-2-thread-1] WARN  pik.domain.thprinter.PrinterService - DLE EOT 3 no response - printer may be offline
+11:39:07.715 [pool-2-thread-1] ERROR pik.domain.thprinter.PrinterService - Failed to query real-time status type 3: No response to DLE EOT 3 - printer offline or not responding
+11:39:07.715 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 query failed (non-critical), skipping: No response to DLE EOT 3 - printer offline or not responding
+11:39:07.916 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
+11:39:07.919 [JavalinDefaultAsyncThreadPool-1] DEBUG pik.domain.thprinter.PrinterController - Sending initial printer status: {"online":true,"ready":true,"coverOpen":false,"paperEmpty":false,"paperNearEnd":false,"error":false,"powerState":1,"lastUpdate":1768214336406,"dummyMode":false}
+11:39:07.922 [JavalinDefaultAsyncThreadPool-1] INFO  pik.domain.thprinter.PrinterController - Printer SSE client printer_bf198a6f-9d83-42fe-9c2d-6ecd2a291e0f initialized with current status
+11:39:07.925 [JavalinDefaultAsyncThreadPool-1] DEBUG pik.domain.thprinter.PrinterController - Printer SSE client printer_bf198a6f-9d83-42fe-9c2d-6ecd2a291e0f connection kept alive
+11:39:13.068 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
+11:39:13.069 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
+11:39:13.270 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
+11:39:13.471 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
+11:39:13.672 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
+11:39:18.824 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
+11:39:18.824 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
+11:39:19.025 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
+11:39:19.226 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
+11:39:19.427 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
+11:39:24.579 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
+11:39:24.579 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
+11:39:24.780 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
+11:39:24.981 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
+11:39:25.182 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
+11:39:30.334 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
+11:39:30.334 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
+11:39:30.535 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
+11:39:30.736 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
+11:39:30.937 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
+11:39:36.089 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
+11:39:36.090 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
+11:39:36.291 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
+11:39:36.492 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
+11:39:36.693 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
+11:39:41.845 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
+11:39:41.845 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
+11:39:42.046 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
+11:39:42.247 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
+11:39:42.448 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
+11:39:47.600 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
+11:39:47.600 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
+11:39:47.801 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
+11:39:48.002 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
+11:39:48.203 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
+11:39:53.355 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
+11:39:53.355 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
+11:39:53.556 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
+11:39:53.757 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
+11:39:53.958 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
+11:39:55.652 [pool-2-thread-2] DEBUG pik.domain.orchestration.SSEManager - Running SSE client cleanup check (1 printer, 1 VFD, 1 Ingenico clients)
+11:39:59.110 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
+11:39:59.110 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
+11:39:59.311 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
+11:39:59.513 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
+11:39:59.714 [pool-2-thread-1] WARN  pik.domain.thprinter.PrinterService - DLE EOT 4 no response - printer may be offline
+11:39:59.714 [pool-2-thread-1] ERROR pik.domain.thprinter.PrinterService - Failed to query real-time status type 4: No response to DLE EOT 4 - printer offline or not responding
+11:39:59.714 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 query failed (non-critical), skipping: No response to DLE EOT 4 - printer offline or not responding
+11:40:00.015 [MasterLoop_prot] DEBUG pik.domain.ingenico.IngenicoService - formatSamType: expected=BUS, found=UNDEFINED (UNDEFINED)
+11:40:00.018 [MasterLoop_prot] DEBUG pik.domain.orchestration.SSEManager - Broadcasting to 1 Ingenico SSE clients
+11:40:00.021 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
+11:40:04.866 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
+11:40:04.866 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
+11:40:05.067 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
+11:40:05.268 [pool-2-thread-1] WARN  pik.domain.thprinter.PrinterService - DLE EOT 3 no response - printer may be offline
+11:40:05.268 [pool-2-thread-1] ERROR pik.domain.thprinter.PrinterService - Failed to query real-time status type 3: No response to DLE EOT 3 - printer offline or not responding
+11:40:05.268 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 query failed (non-critical), skipping: No response to DLE EOT 3 - printer offline or not responding
+11:40:05.469 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
+11:40:06.990 [MasterLoop_prot] DEBUG pik.domain.ingenico.IngenicoService - formatSamType: expected=BUS, found=UNDEFINED (UNDEFINED)
+11:40:06.990 [MasterLoop_prot] DEBUG pik.domain.orchestration.SSEManager - Broadcasting to 1 Ingenico SSE clients
+11:40:06.992 [MasterLoop_prot] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
+11:40:10.621 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
+11:40:10.621 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
+11:40:10.822 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
+11:40:11.023 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
+11:40:11.224 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
+11:40:11.282 [JettyServerThreadPool-53] INFO  io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
 Request: GET [/api/ingenico/status]
-    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@3a3c4688
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@572925fa
     Headers: {Accept=*/*, Priority=u=0, User-Agent=Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0, Referer=http://127.0.0.1:8080/test, Connection=keep-alive, Sec-Fetch-Dest=empty, Sec-Fetch-Site=same-origin, Host=127.0.0.1:8080, Accept-Encoding=gzip, deflate, br, zstd, DNT=1, Sec-Fetch-Mode=cors, Sec-GPC=1, Accept-Language=cs,en-GB;q=0.7,en;q=0.3}
     Cookies: {}
     Body: 
     QueryString: null
     QueryParams: {}
     FormParams: {}
-Response: [200 OK], execution took 6.11 ms
-    Headers: {Date=Mon, 12 Jan 2026 09:49:52 GMT, Content-Type=application/json}
-    Body is 996 bytes (starts on next line):
+Response: [200 OK], execution took 3.88 ms
+    Headers: {Date=Mon, 12 Jan 2026 10:40:11 GMT, Content-Type=application/json}
+    Body is 985 bytes (starts on next line):
     {
   "success": true,
   "message": "Operation completed successfully",
@@ -235,9 +301,9 @@ Response: [200 OK], execution took 6.11 ms
     "transitTerminalStatusCode": 0,
     "transitTerminalStatus": "IDLE",
     "samDukDetected": true,
-    "samDukStatus": "INIT_VERIFYING_SAM_DETECTED",
+    "samDukStatus": "FINISHED",
     "samNumber": "typ\u003dDUK, slot_index\u003d3, sam_number\u003d",
-    "samType": "expected - BUS, found - -",
+    "samType": "expected - BUS, found - UNDEFINED",
     "networkId": 203421,
     "samAtr": "typ\u003dDUK, slot_index\u003d3, ATR: 3B F8 18 00 FF 81 31 FE 45 4A 43 4F 50 76 32 34 31 43 ",
     "slotIndex": 3,
@@ -245,114 +311,29 @@ Response: [200 OK], execution took 6.11 ms
     "unlockStatus": "typ\u003dDUK, slot_index\u003d3, unlock_status\u003dundefined",
     "operational": true,
     "error": false,
-    "lastUpdate": 1768211374530,
+    "lastUpdate": 1768214406990,
     "dummyMode": false
   },
-  "timestamp": 1768211392060
+  "timestamp": 1768214411276
 }
 ----------------------------------------------------------------------------------
-10:49:54.302 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:49:54.302 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:49:54.503 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:49:54.704 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
-10:49:54.905 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
-10:49:55.765 [JettyServerThreadPool-66] INFO  io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
-Request: GET [/api/ingenico/info]
-    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@4adfea8a
-    Headers: {Accept=*/*, Priority=u=0, User-Agent=Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0, Referer=http://127.0.0.1:8080/test, Connection=keep-alive, Sec-Fetch-Dest=empty, Sec-Fetch-Site=same-origin, Host=127.0.0.1:8080, Accept-Encoding=gzip, deflate, br, zstd, DNT=1, Sec-Fetch-Mode=cors, Sec-GPC=1, Accept-Language=cs,en-GB;q=0.7,en;q=0.3}
-    Cookies: {}
-    Body: 
-    QueryString: null
-    QueryParams: {}
-    FormParams: {}
-Response: [200 OK], execution took 2.23 ms
-    Headers: {Date=Mon, 12 Jan 2026 09:49:55 GMT, Content-Type=application/json}
-    Body is 282 bytes (starts on next line):
-    {
-  "success": true,
-  "message": "Operation completed successfully",
-  "data": "Ingenico Card Reader\nInit State: Dokončeno\nIFSF: Connected (Alive)\nTransit: Connected (Alive)\nTerminal ID: TEST4403\nSAM DUK: Detected (INIT_VERIFYING_SAM_DETECTED)",
-  "timestamp": 1768211395758
-}
-----------------------------------------------------------------------------------
-10:49:57.247 [JettyServerThreadPool-49] INFO  io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
-Request: GET [/api/ingenico/config]
-    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@4190fcb8
-    Headers: {Accept=*/*, Priority=u=0, User-Agent=Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0, Referer=http://127.0.0.1:8080/test, Connection=keep-alive, Sec-Fetch-Dest=empty, Sec-Fetch-Site=same-origin, Host=127.0.0.1:8080, Accept-Encoding=gzip, deflate, br, zstd, DNT=1, Sec-Fetch-Mode=cors, Sec-GPC=1, Accept-Language=cs,en-GB;q=0.7,en;q=0.3}
-    Cookies: {}
-    Body: 
-    QueryString: null
-    QueryParams: {}
-    FormParams: {}
-Response: [200 OK], execution took 5.94 ms
-    Headers: {Date=Mon, 12 Jan 2026 09:49:57 GMT, Content-Type=application/json}
-    Body is 260 bytes (starts on next line):
-    {
-  "success": true,
-  "message": "Operation completed successfully",
-  "data": {
-    "connectionType": "NETWORK",
-    "dummyMode": false,
-    "ifsfConnected": true,
-    "transitConnected": true,
-    "terminalId": "TEST4403"
-  },
-  "timestamp": 1768211397239
-}
-----------------------------------------------------------------------------------
-10:49:59.980 [JettyServerThreadPool-66] INFO  io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
-Request: GET [/api/ingenico/diagnostics]
-    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@ba666ee
-    Headers: {Accept=*/*, Priority=u=0, User-Agent=Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0, Referer=http://127.0.0.1:8080/test, Connection=keep-alive, Sec-Fetch-Dest=empty, Sec-Fetch-Site=same-origin, Host=127.0.0.1:8080, Accept-Encoding=gzip, deflate, br, zstd, DNT=1, Sec-Fetch-Mode=cors, Sec-GPC=1, Accept-Language=cs,en-GB;q=0.7,en;q=0.3}
-    Cookies: {}
-    Body: 
-    QueryString: null
-    QueryParams: {}
-    FormParams: {}
-Response: [200 OK], execution took 8.54 ms
-    Headers: {Date=Mon, 12 Jan 2026 09:49:59 GMT, Content-Type=application/json}
-    Body is 548 bytes (starts on next line):
-    {
-  "success": true,
-  "message": "Operation completed successfully",
-  "data": {
-    "initState": "DONE",
-    "initStateDescription": "Dokončeno",
-    "initialized": true,
-    "ifsfConnected": true,
-    "ifsfAppAlive": true,
-    "transitConnected": true,
-    "transitAppAlive": true,
-    "transitTerminalStatusCode": 0,
-    "transitTerminalStatus": "IDLE",
-    "samDukDetected": true,
-    "samDukStatus": "INIT_VERIFYING_SAM_DETECTED",
-    "error": false,
-    "dummyMode": false,
-    "lastUpdate": 1768211374530
-  },
-  "timestamp": 1768211399970
-}
-----------------------------------------------------------------------------------
-10:50:00.057 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:50:00.058 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:50:00.259 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:50:00.460 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
-10:50:00.660 [pool-2-thread-1] WARN  pik.domain.thprinter.PrinterService - DLE EOT 4 no response - printer may be offline
-10:50:00.661 [pool-2-thread-1] ERROR pik.domain.thprinter.PrinterService - Failed to query real-time status type 4: No response to DLE EOT 4 - printer offline or not responding
-10:50:00.661 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 query failed (non-critical), skipping: No response to DLE EOT 4 - printer offline or not responding
-10:50:03.711 [JettyServerThreadPool-49] INFO  io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+11:40:16.375 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
+11:40:16.376 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
+11:40:16.577 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
+11:40:16.778 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
+11:40:16.979 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
+11:40:17.613 [JettyServerThreadPool-52] INFO  io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
 Request: GET [/api/ingenico/status]
-    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@19684f96
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@a40b4dd
     Headers: {Accept=*/*, Priority=u=0, User-Agent=Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0, Referer=http://127.0.0.1:8080/test, Connection=keep-alive, Sec-Fetch-Dest=empty, Sec-Fetch-Site=same-origin, Host=127.0.0.1:8080, Accept-Encoding=gzip, deflate, br, zstd, DNT=1, Sec-Fetch-Mode=cors, Sec-GPC=1, Accept-Language=cs,en-GB;q=0.7,en;q=0.3}
     Cookies: {}
     Body: 
     QueryString: null
     QueryParams: {}
     FormParams: {}
-Response: [200 OK], execution took 2.86 ms
-    Headers: {Date=Mon, 12 Jan 2026 09:50:03 GMT, Content-Type=application/json}
-    Body is 996 bytes (starts on next line):
+Response: [200 OK], execution took 3.25 ms
+    Headers: {Date=Mon, 12 Jan 2026 10:40:17 GMT, Content-Type=application/json}
+    Body is 985 bytes (starts on next line):
     {
   "success": true,
   "message": "Operation completed successfully",
@@ -367,9 +348,9 @@ Response: [200 OK], execution took 2.86 ms
     "transitTerminalStatusCode": 0,
     "transitTerminalStatus": "IDLE",
     "samDukDetected": true,
-    "samDukStatus": "INIT_VERIFYING_SAM_DETECTED",
+    "samDukStatus": "FINISHED",
     "samNumber": "typ\u003dDUK, slot_index\u003d3, sam_number\u003d",
-    "samType": "expected - BUS, found - -",
+    "samType": "expected - BUS, found - UNDEFINED",
     "networkId": 203421,
     "samAtr": "typ\u003dDUK, slot_index\u003d3, ATR: 3B F8 18 00 FF 81 31 FE 45 4A 43 4F 50 76 32 34 31 43 ",
     "slotIndex": 3,
@@ -377,212 +358,169 @@ Response: [200 OK], execution took 2.86 ms
     "unlockStatus": "typ\u003dDUK, slot_index\u003d3, unlock_status\u003dundefined",
     "operational": true,
     "error": false,
-    "lastUpdate": 1768211374530,
+    "lastUpdate": 1768214406990,
     "dummyMode": false
   },
-  "timestamp": 1768211403706
+  "timestamp": 1768214417606
 }
 ----------------------------------------------------------------------------------
-10:50:05.813 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:50:05.813 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:50:06.013 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:50:06.214 [pool-2-thread-2] WARN  pik.domain.thprinter.PrinterService - DLE EOT 3 no response - printer may be offline
-10:50:06.215 [pool-2-thread-2] ERROR pik.domain.thprinter.PrinterService - Failed to query real-time status type 3: No response to DLE EOT 3 - printer offline or not responding
-10:50:06.215 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 query failed (non-critical), skipping: No response to DLE EOT 3 - printer offline or not responding
-10:50:06.415 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
-10:50:11.567 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:50:11.567 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:50:11.768 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:50:11.969 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
-10:50:12.169 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
-10:50:17.321 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:50:17.321 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:50:17.522 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:50:17.723 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
-10:50:17.924 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
-10:50:23.075 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:50:23.075 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:50:23.276 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:50:23.477 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
-10:50:23.678 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
-10:50:28.830 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:50:28.830 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:50:29.031 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:50:29.232 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
-10:50:29.433 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
-10:50:31.131 [pool-2-thread-1] DEBUG pik.domain.orchestration.SSEManager - Running SSE client cleanup check (1 printer, 1 VFD, 1 Ingenico clients)
-10:50:34.584 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:50:34.584 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:50:34.785 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:50:34.986 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
-10:50:35.187 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
-10:50:40.338 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:50:40.339 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:50:40.539 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:50:40.740 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
-10:50:40.941 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
-10:50:46.093 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:50:46.093 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:50:46.294 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:50:46.494 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
-10:50:46.694 [pool-2-thread-2] WARN  pik.domain.thprinter.PrinterService - DLE EOT 4 no response - printer may be offline
-10:50:46.694 [pool-2-thread-2] ERROR pik.domain.thprinter.PrinterService - Failed to query real-time status type 4: No response to DLE EOT 4 - printer offline or not responding
-10:50:46.695 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 query failed (non-critical), skipping: No response to DLE EOT 4 - printer offline or not responding
-10:50:51.845 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:50:51.845 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:50:52.046 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:50:52.246 [pool-2-thread-2] WARN  pik.domain.thprinter.PrinterService - DLE EOT 3 no response - printer may be offline
-10:50:52.246 [pool-2-thread-2] ERROR pik.domain.thprinter.PrinterService - Failed to query real-time status type 3: No response to DLE EOT 3 - printer offline or not responding
-10:50:52.246 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 query failed (non-critical), skipping: No response to DLE EOT 3 - printer offline or not responding
-10:50:52.447 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
-10:50:57.598 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:50:57.598 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:50:57.798 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:50:57.999 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
-10:50:58.199 [pool-2-thread-2] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
-10:51:03.350 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:51:03.352 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:51:03.553 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:51:03.753 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
-10:51:03.954 [pool-2-thread-3] WARN  pik.domain.thprinter.PrinterService - DLE EOT 4 no response - printer may be offline
-10:51:03.954 [pool-2-thread-3] ERROR pik.domain.thprinter.PrinterService - Failed to query real-time status type 4: No response to DLE EOT 4 - printer offline or not responding
-10:51:03.954 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 query failed (non-critical), skipping: No response to DLE EOT 4 - printer offline or not responding
-10:51:09.106 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:51:09.106 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:51:09.307 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:51:09.507 [pool-2-thread-3] WARN  pik.domain.thprinter.PrinterService - DLE EOT 3 no response - printer may be offline
-10:51:09.507 [pool-2-thread-3] ERROR pik.domain.thprinter.PrinterService - Failed to query real-time status type 3: No response to DLE EOT 3 - printer offline or not responding
-10:51:09.507 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 query failed (non-critical), skipping: No response to DLE EOT 3 - printer offline or not responding
-10:51:09.708 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
-10:51:14.860 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:51:14.860 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:51:15.061 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:51:15.262 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
-10:51:15.462 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
-10:51:20.613 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:51:20.613 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:51:20.814 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:51:21.015 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
-10:51:21.216 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
-10:51:26.367 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:51:26.367 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:51:26.568 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:51:26.768 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
-10:51:26.969 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
-10:51:31.131 [pool-2-thread-2] DEBUG pik.domain.orchestration.SSEManager - Running SSE client cleanup check (1 printer, 1 VFD, 1 Ingenico clients)
-10:51:32.120 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:51:32.120 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:51:32.321 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:51:32.521 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
-10:51:32.722 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
-10:51:37.873 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:51:37.873 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:51:38.074 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:51:38.275 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
-10:51:38.475 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
-10:51:43.627 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:51:43.627 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:51:43.828 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:51:44.029 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
-10:51:44.230 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
-10:51:49.381 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:51:49.381 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:51:49.581 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:51:49.782 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
-10:51:49.982 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
-10:51:55.133 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:51:55.133 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:51:55.334 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:51:55.535 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
-10:51:55.735 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
-10:52:00.887 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
-10:52:00.889 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
-10:52:01.090 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
-10:52:01.291 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
-10:52:01.491 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
-10:52:05.142 [Thread-10] INFO  pik.domain.orchestration.ShutdownManager - Shutting down Integrated Controller...
-10:52:05.145 [Thread-10] INFO  pik.domain.orchestration.ShutdownManager - MasterLoop stopped
-10:52:05.146 [Thread-10] INFO  pik.domain.orchestration.ShutdownManager - IoCtrl shut down
-10:52:05.147 [MasterLoop_prot] INFO  App - Master loop finished
-10:52:05.147 [Thread-10] INFO  pik.domain.orchestration.ShutdownManager - Ingenico protocol controllers and proxies shut down
-10:52:05.149 [Thread-10] DEBUG pik.domain.ingenico.IngenicoService - formatSamType: expected=BUS, found=UNDEFINED (UNDEFINED)
-10:52:05.150 [Thread-10] DEBUG pik.domain.orchestration.SSEManager - Broadcasting to 1 Ingenico SSE clients
-10:52:05.154 [Thread-10] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
-10:52:05.154 [Thread-10] DEBUG pik.domain.ingenico.IngenicoService - formatSamType: expected=BUS, found=UNDEFINED (UNDEFINED)
-10:52:05.155 [Thread-10] DEBUG pik.domain.orchestration.SSEManager - Broadcasting to 1 Ingenico SSE clients
-10:52:05.158 [Thread-10] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
-10:52:05.158 [Thread-10] DEBUG pik.domain.ingenico.IngenicoService - formatSamType: expected=BUS, found=UNDEFINED (UNDEFINED)
-10:52:05.159 [Thread-10] DEBUG pik.domain.orchestration.SSEManager - Broadcasting to 1 Ingenico SSE clients
-10:52:05.162 [Thread-10] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
-10:52:05.163 [Thread-10] DEBUG pik.domain.ingenico.IngenicoService - formatSamType: expected=BUS, found=UNDEFINED (UNDEFINED)
-10:52:05.164 [Thread-10] DEBUG pik.domain.orchestration.SSEManager - Broadcasting to 1 Ingenico SSE clients
-10:52:05.166 [Thread-10] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
-10:52:05.166 [Thread-10] DEBUG pik.domain.ingenico.IngenicoService - formatSamType: expected=BUS, found=UNDEFINED (UNDEFINED)
-10:52:05.167 [Thread-10] DEBUG pik.domain.orchestration.SSEManager - Broadcasting to 1 Ingenico SSE clients
-10:52:05.168 [Thread-10] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
-10:52:05.168 [Thread-10] DEBUG pik.domain.ingenico.IngenicoService - formatSamType: expected=BUS, found=UNDEFINED (UNDEFINED)
-10:52:05.169 [Thread-10] DEBUG pik.domain.orchestration.SSEManager - Broadcasting to 1 Ingenico SSE clients
-10:52:05.170 [Thread-10] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
-10:52:05.170 [Thread-10] INFO  App - IOGeneral deinited
-10:52:05.171 [Thread-10] INFO  pik.domain.orchestration.SSEManager - Closing 1 printer SSE clients, 1 VFD SSE clients, 1 Ingenico SSE clients
-10:52:05.171 [Thread-10] INFO  pik.domain.thprinter.PrinterController - Printer SSE client printer_693e2868-49cf-41d4-93a6-8983a180c760 closed
-10:52:05.173 [Thread-10] INFO  io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+11:40:22.130 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
+11:40:22.130 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
+11:40:22.331 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
+11:40:22.532 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
+11:40:22.733 [pool-2-thread-1] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
+11:40:27.010 [JettyServerThreadPool-54] INFO  io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: GET [/api/ingenico/status]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@279a9505
+    Headers: {Accept=*/*, Priority=u=0, User-Agent=Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0, Referer=http://127.0.0.1:8080/test, Connection=keep-alive, Sec-Fetch-Dest=empty, Sec-Fetch-Site=same-origin, Host=127.0.0.1:8080, Accept-Encoding=gzip, deflate, br, zstd, DNT=1, Sec-Fetch-Mode=cors, Sec-GPC=1, Accept-Language=cs,en-GB;q=0.7,en;q=0.3}
+    Cookies: {}
+    Body: 
+    QueryString: null
+    QueryParams: {}
+    FormParams: {}
+Response: [200 OK], execution took 1.25 ms
+    Headers: {Date=Mon, 12 Jan 2026 10:40:27 GMT, Content-Type=application/json}
+    Body is 985 bytes (starts on next line):
+    {
+  "success": true,
+  "message": "Operation completed successfully",
+  "data": {
+    "initState": "DONE",
+    "initialized": true,
+    "ifsfConnected": true,
+    "ifsfAppAlive": true,
+    "terminalId": "TEST4403",
+    "transitConnected": true,
+    "transitAppAlive": true,
+    "transitTerminalStatusCode": 0,
+    "transitTerminalStatus": "IDLE",
+    "samDukDetected": true,
+    "samDukStatus": "FINISHED",
+    "samNumber": "typ\u003dDUK, slot_index\u003d3, sam_number\u003d",
+    "samType": "expected - BUS, found - UNDEFINED",
+    "networkId": 203421,
+    "samAtr": "typ\u003dDUK, slot_index\u003d3, ATR: 3B F8 18 00 FF 81 31 FE 45 4A 43 4F 50 76 32 34 31 43 ",
+    "slotIndex": 3,
+    "slotStatus": "typ\u003dDUK, slot_index\u003d3, slot_status\u003dpower_on",
+    "unlockStatus": "typ\u003dDUK, slot_index\u003d3, unlock_status\u003dundefined",
+    "operational": true,
+    "error": false,
+    "lastUpdate": 1768214406990,
+    "dummyMode": false
+  },
+  "timestamp": 1768214427005
+}
+----------------------------------------------------------------------------------
+11:40:27.884 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
+11:40:27.884 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
+11:40:28.084 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
+11:40:28.285 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
+11:40:28.486 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
+11:40:33.637 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
+11:40:33.638 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
+11:40:33.838 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
+11:40:34.039 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
+11:40:34.239 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
+11:40:39.391 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
+11:40:39.391 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
+11:40:39.600 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
+11:40:39.801 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
+11:40:40.002 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
+11:40:45.153 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
+11:40:45.153 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
+11:40:45.354 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
+11:40:45.554 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 response: 0x12
+11:40:45.755 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
+11:40:50.906 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - ASB: byte1=0x14, online=yes, cover=closed
+11:40:50.909 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - Printer online and cover closed - normal state
+11:40:51.110 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 2 response: 0x12
+11:40:51.311 [pool-2-thread-3] WARN  pik.domain.thprinter.PrinterService - DLE EOT 3 no response - printer may be offline
+11:40:51.312 [pool-2-thread-3] ERROR pik.domain.thprinter.PrinterService - Failed to query real-time status type 3: No response to DLE EOT 3 - printer offline or not responding
+11:40:51.312 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 3 query failed (non-critical), skipping: No response to DLE EOT 3 - printer offline or not responding
+11:40:51.512 [pool-2-thread-3] DEBUG pik.domain.thprinter.PrinterService - DLE EOT 4 response: 0x12
+11:40:52.891 [Thread-10] INFO  pik.domain.orchestration.ShutdownManager - Shutting down Integrated Controller...
+11:40:52.893 [Thread-10] INFO  pik.domain.orchestration.ShutdownManager - MasterLoop stopped
+11:40:52.893 [MasterLoop_prot] INFO  App - Master loop finished
+11:40:52.893 [Thread-10] INFO  pik.domain.orchestration.ShutdownManager - IoCtrl shut down
+11:40:52.893 [Thread-10] INFO  pik.domain.orchestration.ShutdownManager - Ingenico protocol controllers and proxies shut down
+11:40:52.894 [Thread-10] DEBUG pik.domain.ingenico.IngenicoService - formatSamType: expected=BUS, found=UNDEFINED (UNDEFINED)
+11:40:52.894 [Thread-10] DEBUG pik.domain.orchestration.SSEManager - Broadcasting to 1 Ingenico SSE clients
+11:40:52.895 [Thread-10] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
+11:40:52.895 [Thread-10] DEBUG pik.domain.ingenico.IngenicoService - formatSamType: expected=BUS, found=UNDEFINED (UNDEFINED)
+11:40:52.895 [Thread-10] DEBUG pik.domain.orchestration.SSEManager - Broadcasting to 1 Ingenico SSE clients
+11:40:52.896 [Thread-10] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
+11:40:52.896 [Thread-10] DEBUG pik.domain.ingenico.IngenicoService - formatSamType: expected=BUS, found=UNDEFINED (UNDEFINED)
+11:40:52.896 [Thread-10] DEBUG pik.domain.orchestration.SSEManager - Broadcasting to 1 Ingenico SSE clients
+11:40:52.897 [Thread-10] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
+11:40:52.899 [Thread-10] DEBUG pik.domain.ingenico.IngenicoService - formatSamType: expected=BUS, found=UNDEFINED (UNDEFINED)
+11:40:52.899 [Thread-10] DEBUG pik.domain.orchestration.SSEManager - Broadcasting to 1 Ingenico SSE clients
+11:40:52.900 [Thread-10] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
+11:40:52.901 [Thread-10] DEBUG pik.domain.ingenico.IngenicoService - formatSamType: expected=BUS, found=UNDEFINED (UNDEFINED)
+11:40:52.901 [Thread-10] DEBUG pik.domain.orchestration.SSEManager - Broadcasting to 1 Ingenico SSE clients
+11:40:52.902 [Thread-10] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
+11:40:52.902 [Thread-10] DEBUG pik.domain.ingenico.IngenicoService - formatSamType: expected=BUS, found=UNDEFINED (UNDEFINED)
+11:40:52.904 [Thread-10] DEBUG pik.domain.orchestration.SSEManager - Broadcasting to 1 Ingenico SSE clients
+11:40:52.905 [Thread-10] DEBUG pik.domain.IntegratedController - Broadcast Ingenico status update to Ingenico SSE clients
+11:40:52.905 [Thread-10] INFO  App - IOGeneral deinited
+11:40:52.905 [Thread-10] INFO  pik.domain.orchestration.SSEManager - Closing 1 printer SSE clients, 1 VFD SSE clients, 1 Ingenico SSE clients
+11:40:52.905 [Thread-10] INFO  pik.domain.thprinter.PrinterController - Printer SSE client printer_bf198a6f-9d83-42fe-9c2d-6ecd2a291e0f closed
+11:40:52.907 [Thread-10] INFO  io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
 Request: GET [/api/printer/events/status]
-    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@24e9ae3c
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@34ae4cd4
     Headers: {Accept=text/event-stream, Priority=u=4, User-Agent=Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0, Connection=keep-alive, Referer=http://127.0.0.1:8080/test, Sec-Fetch-Dest=empty, Sec-Fetch-Site=same-origin, Host=127.0.0.1:8080, Accept-Encoding=gzip, deflate, br, zstd, DNT=1, Pragma=no-cache, Sec-Fetch-Mode=cors, Cache-Control=no-cache, Sec-GPC=1, Accept-Language=cs,en-GB;q=0.7,en;q=0.3}
     Cookies: {}
     Body: 
     QueryString: null
     QueryParams: {}
     FormParams: {}
-Response: [200 OK], execution took 139640.13 ms
-    Headers: {Cache-Control=no-cache, Connection=close, Date=Mon, 12 Jan 2026 09:49:45 GMT, X-Accel-Buffering=no, Content-Type=text/event-stream;charset=utf-8}
+Response: [200 OK], execution took 105527.30 ms
+    Headers: {Cache-Control=no-cache, Connection=close, Date=Mon, 12 Jan 2026 10:39:07 GMT, X-Accel-Buffering=no, Content-Type=text/event-stream;charset=utf-8}
     No body was set
 ----------------------------------------------------------------------------------
-10:52:05.174 [Thread-10] DEBUG pik.domain.SSEClient - Closed SSE client printer_693e2868-49cf-41d4-93a6-8983a180c760
-10:52:05.174 [Thread-10] INFO  pik.domain.vfd.VFDController - VFD SSE client vfd_dec18e41-4921-49e4-bc7d-b028b7818291 closed
-10:52:05.175 [Thread-10] INFO  io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+11:40:52.908 [Thread-10] DEBUG pik.domain.SSEClient - Closed SSE client printer_bf198a6f-9d83-42fe-9c2d-6ecd2a291e0f
+11:40:52.908 [Thread-10] INFO  pik.domain.vfd.VFDController - VFD SSE client vfd_d9ad7bd1-c94d-4a35-a1e9-f3314c095040 closed
+11:40:52.909 [Thread-10] INFO  io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
 Request: GET [/api/vfd/events/status]
-    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@41f0b611
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@5d0b939
     Headers: {Accept=text/event-stream, Priority=u=4, User-Agent=Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0, Connection=keep-alive, Referer=http://127.0.0.1:8080/test, Sec-Fetch-Dest=empty, Sec-Fetch-Site=same-origin, Host=127.0.0.1:8080, Accept-Encoding=gzip, deflate, br, zstd, DNT=1, Pragma=no-cache, Sec-Fetch-Mode=cors, Cache-Control=no-cache, Sec-GPC=1, Accept-Language=cs,en-GB;q=0.7,en;q=0.3}
     Cookies: {}
     Body: 
     QueryString: null
     QueryParams: {}
     FormParams: {}
-Response: [200 OK], execution took 139642.88 ms
-    Headers: {Cache-Control=no-cache, Connection=close, Date=Mon, 12 Jan 2026 09:49:45 GMT, X-Accel-Buffering=no, Content-Type=text/event-stream;charset=utf-8}
+Response: [200 OK], execution took 105526.86 ms
+    Headers: {Cache-Control=no-cache, Connection=close, Date=Mon, 12 Jan 2026 10:39:07 GMT, X-Accel-Buffering=no, Content-Type=text/event-stream;charset=utf-8}
     No body was set
 ----------------------------------------------------------------------------------
-10:52:05.176 [Thread-10] DEBUG pik.domain.SSEClient - Closed SSE client vfd_dec18e41-4921-49e4-bc7d-b028b7818291
-10:52:05.176 [Thread-10] INFO  pik.domain.ingenico.IngenicoController - Ingenico SSE client ingenico_81248c05-e57c-4163-bd14-7756de7b4d1e closed
-10:52:05.177 [Thread-10] INFO  io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+11:40:52.910 [Thread-10] DEBUG pik.domain.SSEClient - Closed SSE client vfd_d9ad7bd1-c94d-4a35-a1e9-f3314c095040
+11:40:52.910 [Thread-10] INFO  pik.domain.ingenico.IngenicoController - Ingenico SSE client ingenico_8442dd40-2182-4dc4-bec0-2cbf323fb150 closed
+11:40:52.911 [Thread-10] INFO  io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
 Request: GET [/api/ingenico/events/status]
-    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@50c0c10f
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@120f85e2
     Headers: {Accept=text/event-stream, Priority=u=4, User-Agent=Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0, Connection=keep-alive, Referer=http://127.0.0.1:8080/test, Sec-Fetch-Dest=empty, Sec-Fetch-Site=same-origin, Host=127.0.0.1:8080, Accept-Encoding=gzip, deflate, br, zstd, DNT=1, Pragma=no-cache, Sec-Fetch-Mode=cors, Cache-Control=no-cache, Sec-GPC=1, Accept-Language=cs,en-GB;q=0.7,en;q=0.3}
     Cookies: {}
     Body: 
     QueryString: null
     QueryParams: {}
     FormParams: {}
-Response: [200 OK], execution took 139642.45 ms
-    Headers: {Cache-Control=no-cache, Connection=close, Date=Mon, 12 Jan 2026 09:49:45 GMT, X-Accel-Buffering=no, Content-Type=text/event-stream;charset=utf-8}
+Response: [200 OK], execution took 105530.92 ms
+    Headers: {Cache-Control=no-cache, Connection=close, Date=Mon, 12 Jan 2026 10:39:07 GMT, X-Accel-Buffering=no, Content-Type=text/event-stream;charset=utf-8}
     No body was set
 ----------------------------------------------------------------------------------
-10:52:05.178 [Thread-10] DEBUG pik.domain.SSEClient - Closed SSE client ingenico_81248c05-e57c-4163-bd14-7756de7b4d1e
-10:52:05.178 [Thread-10] INFO  io.javalin.Javalin - Stopping Javalin ...
-10:52:05.186 [Thread-10] INFO  io.javalin.Javalin - Javalin has stopped
-10:52:05.186 [Thread-10] INFO  pik.domain.thprinter.StatusMonitorService - Stopping printer status monitoring
-10:52:05.186 [Thread-10] INFO  pik.domain.thprinter.StatusMonitorService - Status monitoring stopped
-10:52:05.187 [Thread-10] DEBUG pik.domain.thprinter.PrinterService - Cleaning up printer in state: READY
-10:52:05.187 [Thread-10] DEBUG pik.domain.thprinter.PrinterService - EscPos closed
-10:52:05.187 [Thread-10] DEBUG pik.domain.thprinter.PrinterService - Output stream closed
-10:52:05.187 [Thread-10] DEBUG pik.domain.thprinter.PrinterService - Socket closed
-10:52:05.187 [Thread-10] DEBUG pik.domain.thprinter.PrinterService - Printer state transition: READY -> UNINITIALIZED
-10:52:05.187 [Thread-10] INFO  pik.domain.thprinter.PrinterService - Printer closed successfully
-10:52:05.187 [Thread-10] INFO  pik.domain.vfd.AbstractVFDDisplay - Disconnected from FV-2030B
-10:52:05.187 [Thread-10] INFO  pik.domain.vfd.VFDService - VFD display closed successfully
-10:52:05.187 [Thread-10] DEBUG pik.domain.IntegratedController - Broadcast VFD status update to VFD SSE clients
-10:52:05.188 [Thread-10] INFO  pik.domain.ingenico.IngenicoService - Closing Ingenico service
-10:52:05.188 [Thread-10] INFO  pik.domain.ingenico.IngenicoService - Ingenico service closed (subscriptions disposed)
-10:52:05.188 [Thread-10] INFO  pik.domain.orchestration.ShutdownManager - Application shut down successfully
+11:40:52.912 [Thread-10] DEBUG pik.domain.SSEClient - Closed SSE client ingenico_8442dd40-2182-4dc4-bec0-2cbf323fb150
+11:40:52.912 [Thread-10] INFO  io.javalin.Javalin - Stopping Javalin ...
+11:40:52.918 [Thread-10] INFO  io.javalin.Javalin - Javalin has stopped
+11:40:52.918 [Thread-10] INFO  pik.domain.thprinter.StatusMonitorService - Stopping printer status monitoring
+11:40:52.918 [Thread-10] INFO  pik.domain.thprinter.StatusMonitorService - Status monitoring stopped
+11:40:52.919 [Thread-10] DEBUG pik.domain.thprinter.PrinterService - Cleaning up printer in state: READY
+11:40:52.919 [Thread-10] DEBUG pik.domain.thprinter.PrinterService - EscPos closed
+11:40:52.919 [Thread-10] DEBUG pik.domain.thprinter.PrinterService - Output stream closed
+11:40:52.919 [Thread-10] DEBUG pik.domain.thprinter.PrinterService - Socket closed
+11:40:52.919 [Thread-10] DEBUG pik.domain.thprinter.PrinterService - Printer state transition: READY -> UNINITIALIZED
+11:40:52.919 [Thread-10] INFO  pik.domain.thprinter.PrinterService - Printer closed successfully
+11:40:52.919 [Thread-10] INFO  pik.domain.vfd.AbstractVFDDisplay - Disconnected from FV-2030B
+11:40:52.919 [Thread-10] INFO  pik.domain.vfd.VFDService - VFD display closed successfully
+11:40:52.919 [Thread-10] DEBUG pik.domain.IntegratedController - Broadcast VFD status update to VFD SSE clients
+11:40:52.919 [Thread-10] INFO  pik.domain.ingenico.IngenicoService - Closing Ingenico service
+11:40:52.919 [Thread-10] INFO  pik.domain.ingenico.IngenicoService - Ingenico service closed (subscriptions disposed)
+11:40:52.919 [Thread-10] INFO  pik.domain.orchestration.ShutdownManager - Application shut down successfully
